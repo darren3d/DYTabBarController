@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		029F5C2E2C99F3944A35D3095137BD26 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C5C7B8A44BCF381F1BF279A6A7B99 /* StackView.swift */; };
+		59FF33B113C46D8BA8C6B90BC11CA0BA /* Pods-DYTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 913A5EDE9452CBDD5C65D16E24F5EA1D /* Pods-DYTabBarController-dummy.m */; };
+		7886717D01BF065ABB66BE8E043493F7 /* Arranged-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC26D07D1C360B89A06C7C531BAE75D /* Arranged-dummy.m */; };
+		78B76BB32A3D1F50DADAD8332065E279 /* Arranged-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C47B63FE5040F05EED670DCF25BE5435 /* Arranged-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80AD26DE2BC718EDE6776EBF41C335DF /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8177E866BBAE97144B09F7F76EB66827 /* Internal.swift */; };
+		8328504AB15DD3B5806B37F126856FCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		868DE3877A3FBA0F29C468B32A44C0C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A5854D218EBFB47B79A62D7EE3186FF1 /* DistributionLayoutArrangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9155A57445D1CABC7F7C0F17DA14E38 /* DistributionLayoutArrangement.swift */; };
+		B78A9D02418851E8E1C445ED0C0DAD83 /* Pods-DYTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A724EDD6E6002D1A45E51307164A4C66 /* Pods-DYTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB9A660728BDFD08220CC488DBF4953E /* LayoutArrangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B0C8E44D2F25A83DE93B5B976FDE3 /* LayoutArrangement.swift */; };
+		E479D7B2F579FB08CD5690FE86762F15 /* AlignedLayoutArrangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3266BA58D8E87381B5E4A5A9D8085D5 /* AlignedLayoutArrangement.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		263564FF0C6F5D3C82CC8E007A4688B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1725E0300DF75AFAF87F892B834EB840;
+			remoteInfo = Arranged;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18787FAE3F83A1227707270835E3E252 /* Pods-DYTabBarController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYTabBarController-frameworks.sh"; sourceTree = "<group>"; };
+		250EA3B3D92DBE1B1E6328E5ADF2048E /* Pods-DYTabBarController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DYTabBarController-acknowledgements.plist"; sourceTree = "<group>"; };
+		314365F3B4B4F3E4AD1854F396510F44 /* Arranged-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Arranged-prefix.pch"; sourceTree = "<group>"; };
+		32C6FD12769B289C1402BE0A1CB92A23 /* Arranged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Arranged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34815D5EC9D25EF6148C14B3DB46E502 /* Arranged.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Arranged.modulemap; sourceTree = "<group>"; };
+		5016C709575E448EB4FB821F3FA3A7AF /* Pods-DYTabBarController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYTabBarController-resources.sh"; sourceTree = "<group>"; };
+		51BF46AA68436A4759424C2064012C33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51C668E151D2B3A3670EBA83E7C79EF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A210313A7AFF88E02579F5806C42DA5 /* Pods-DYTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DYTabBarController.modulemap"; sourceTree = "<group>"; };
+		654970A7F9DE2E3F065FBE6D42B4CA3F /* Pods-DYTabBarController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DYTabBarController-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8177E866BBAE97144B09F7F76EB66827 /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Sources/Internal.swift; sourceTree = "<group>"; };
+		913A5EDE9452CBDD5C65D16E24F5EA1D /* Pods-DYTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DYTabBarController-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		979AA5FB62D26EC16948689528D90E2D /* Arranged.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Arranged.xcconfig; sourceTree = "<group>"; };
+		A3266BA58D8E87381B5E4A5A9D8085D5 /* AlignedLayoutArrangement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlignedLayoutArrangement.swift; path = Sources/AlignedLayoutArrangement.swift; sourceTree = "<group>"; };
+		A43B0C8E44D2F25A83DE93B5B976FDE3 /* LayoutArrangement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutArrangement.swift; path = Sources/LayoutArrangement.swift; sourceTree = "<group>"; };
+		A724EDD6E6002D1A45E51307164A4C66 /* Pods-DYTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DYTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		AAD44BA0FD3BD5DDFD04FD0DE62F845B /* Pods_DYTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C360A57411FA032BF2AC723118B7E038 /* Pods-DYTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
+		C47B63FE5040F05EED670DCF25BE5435 /* Arranged-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Arranged-umbrella.h"; sourceTree = "<group>"; };
+		C9155A57445D1CABC7F7C0F17DA14E38 /* DistributionLayoutArrangement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistributionLayoutArrangement.swift; path = Sources/DistributionLayoutArrangement.swift; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D47C5C7B8A44BCF381F1BF279A6A7B99 /* StackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackView.swift; path = Sources/StackView.swift; sourceTree = "<group>"; };
+		EBC5D89555074706F38EE550B38FABA0 /* Pods-DYTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		FEC26D07D1C360B89A06C7C531BAE75D /* Arranged-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Arranged-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22BEA0BE37718FB20665184981AE7427 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8328504AB15DD3B5806B37F126856FCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8DC52C4381B81B3653A946CFE230A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868DE3877A3FBA0F29C468B32A44C0C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4EF2F48D3E061F3BA69267BBD857EE36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				34815D5EC9D25EF6148C14B3DB46E502 /* Arranged.modulemap */,
+				979AA5FB62D26EC16948689528D90E2D /* Arranged.xcconfig */,
+				FEC26D07D1C360B89A06C7C531BAE75D /* Arranged-dummy.m */,
+				314365F3B4B4F3E4AD1854F396510F44 /* Arranged-prefix.pch */,
+				C47B63FE5040F05EED670DCF25BE5435 /* Arranged-umbrella.h */,
+				51BF46AA68436A4759424C2064012C33 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Arranged";
+			sourceTree = "<group>";
+		};
+		7917555FE84C6F99912FC35C96AE95A5 /* Arranged */ = {
+			isa = PBXGroup;
+			children = (
+				A3266BA58D8E87381B5E4A5A9D8085D5 /* AlignedLayoutArrangement.swift */,
+				C9155A57445D1CABC7F7C0F17DA14E38 /* DistributionLayoutArrangement.swift */,
+				8177E866BBAE97144B09F7F76EB66827 /* Internal.swift */,
+				A43B0C8E44D2F25A83DE93B5B976FDE3 /* LayoutArrangement.swift */,
+				D47C5C7B8A44BCF381F1BF279A6A7B99 /* StackView.swift */,
+				4EF2F48D3E061F3BA69267BBD857EE36 /* Support Files */,
+			);
+			path = Arranged;
+			sourceTree = "<group>";
+		};
+		7B7C44914AEBAA2BD2239D5108DFBC8A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D51EA27BDDB9BADBE89DEF7378CFC079 /* Pods-DYTabBarController */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8DEBBE4291A602FCCB01AE800C5D221E /* Pods */,
+				9581A81086D6B8DF68B78AFFB1F20509 /* Products */,
+				7B7C44914AEBAA2BD2239D5108DFBC8A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8DEBBE4291A602FCCB01AE800C5D221E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7917555FE84C6F99912FC35C96AE95A5 /* Arranged */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9581A81086D6B8DF68B78AFFB1F20509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32C6FD12769B289C1402BE0A1CB92A23 /* Arranged.framework */,
+				AAD44BA0FD3BD5DDFD04FD0DE62F845B /* Pods_DYTabBarController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D51EA27BDDB9BADBE89DEF7378CFC079 /* Pods-DYTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				51C668E151D2B3A3670EBA83E7C79EF4 /* Info.plist */,
+				5A210313A7AFF88E02579F5806C42DA5 /* Pods-DYTabBarController.modulemap */,
+				654970A7F9DE2E3F065FBE6D42B4CA3F /* Pods-DYTabBarController-acknowledgements.markdown */,
+				250EA3B3D92DBE1B1E6328E5ADF2048E /* Pods-DYTabBarController-acknowledgements.plist */,
+				913A5EDE9452CBDD5C65D16E24F5EA1D /* Pods-DYTabBarController-dummy.m */,
+				18787FAE3F83A1227707270835E3E252 /* Pods-DYTabBarController-frameworks.sh */,
+				5016C709575E448EB4FB821F3FA3A7AF /* Pods-DYTabBarController-resources.sh */,
+				A724EDD6E6002D1A45E51307164A4C66 /* Pods-DYTabBarController-umbrella.h */,
+				C360A57411FA032BF2AC723118B7E038 /* Pods-DYTabBarController.debug.xcconfig */,
+				EBC5D89555074706F38EE550B38FABA0 /* Pods-DYTabBarController.release.xcconfig */,
+			);
+			name = "Pods-DYTabBarController";
+			path = "Target Support Files/Pods-DYTabBarController";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		086AA622BF20A8B4F1885F9FCDF30E7D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B76BB32A3D1F50DADAD8332065E279 /* Arranged-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D0937E8F85EEA773CCCCAE6927D5362 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B78A9D02418851E8E1C445ED0C0DAD83 /* Pods-DYTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1725E0300DF75AFAF87F892B834EB840 /* Arranged */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F1D91D379970BCE0D7B37E51F2423F /* Build configuration list for PBXNativeTarget "Arranged" */;
+			buildPhases = (
+				90E6EC40A6AF5699652C5C5D3843C989 /* Sources */,
+				22BEA0BE37718FB20665184981AE7427 /* Frameworks */,
+				086AA622BF20A8B4F1885F9FCDF30E7D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Arranged;
+			productName = Arranged;
+			productReference = 32C6FD12769B289C1402BE0A1CB92A23 /* Arranged.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51351FDDCBA8A937016393F5A64DD221 /* Pods-DYTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626469281EEC88B06FD0EF6FB4EA9453 /* Build configuration list for PBXNativeTarget "Pods-DYTabBarController" */;
+			buildPhases = (
+				502A6C73B3B08AADECA92A45F1A36831 /* Sources */,
+				5E8DC52C4381B81B3653A946CFE230A8 /* Frameworks */,
+				8D0937E8F85EEA773CCCCAE6927D5362 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89F196E75A8D1340541E96E4D6593CB9 /* PBXTargetDependency */,
+			);
+			name = "Pods-DYTabBarController";
+			productName = "Pods-DYTabBarController";
+			productReference = AAD44BA0FD3BD5DDFD04FD0DE62F845B /* Pods_DYTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9581A81086D6B8DF68B78AFFB1F20509 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1725E0300DF75AFAF87F892B834EB840 /* Arranged */,
+				51351FDDCBA8A937016393F5A64DD221 /* Pods-DYTabBarController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		502A6C73B3B08AADECA92A45F1A36831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FF33B113C46D8BA8C6B90BC11CA0BA /* Pods-DYTabBarController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90E6EC40A6AF5699652C5C5D3843C989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E479D7B2F579FB08CD5690FE86762F15 /* AlignedLayoutArrangement.swift in Sources */,
+				7886717D01BF065ABB66BE8E043493F7 /* Arranged-dummy.m in Sources */,
+				A5854D218EBFB47B79A62D7EE3186FF1 /* DistributionLayoutArrangement.swift in Sources */,
+				80AD26DE2BC718EDE6776EBF41C335DF /* Internal.swift in Sources */,
+				BB9A660728BDFD08220CC488DBF4953E /* LayoutArrangement.swift in Sources */,
+				029F5C2E2C99F3944A35D3095137BD26 /* StackView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89F196E75A8D1340541E96E4D6593CB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Arranged;
+			target = 1725E0300DF75AFAF87F892B834EB840 /* Arranged */;
+			targetProxy = 263564FF0C6F5D3C82CC8E007A4688B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		102AF639ED0FADD9FFD82DCE9BAF7130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979AA5FB62D26EC16948689528D90E2D /* Arranged.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Arranged/Arranged-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Arranged/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Arranged/Arranged.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Arranged;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		49AA976632363CB7B007AFC4FEB5E961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC5D89555074706F38EE550B38FABA0 /* Pods-DYTabBarController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DYTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DYTabBarController/Pods-DYTabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DYTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5FB488D7E2E57B423916AF156DBA603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979AA5FB62D26EC16948689528D90E2D /* Arranged.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Arranged/Arranged-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Arranged/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Arranged/Arranged.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Arranged;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EEA69CF63C5663E93B5C7691F30660B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C360A57411FA032BF2AC723118B7E038 /* Pods-DYTabBarController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DYTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DYTabBarController/Pods-DYTabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DYTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626469281EEC88B06FD0EF6FB4EA9453 /* Build configuration list for PBXNativeTarget "Pods-DYTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA69CF63C5663E93B5C7691F30660B9 /* Debug */,
+				49AA976632363CB7B007AFC4FEB5E961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9F1D91D379970BCE0D7B37E51F2423F /* Build configuration list for PBXNativeTarget "Arranged" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				102AF639ED0FADD9FFD82DCE9BAF7130 /* Debug */,
+				B5FB488D7E2E57B423916AF156DBA603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
