@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D3A7D71D5CE09A008B1C2F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D3A7D61D5CE09A008B1C2F /* SnapKit.framework */; };
 		651BBC8615772B98FA83D1BB /* Pods_DYTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B89B1E0036A2A4F7228609 /* Pods_DYTabBarController.framework */; };
 		84BE97711D5C79C100FD25F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE97701D5C79C100FD25F0 /* AppDelegate.swift */; };
 		84BE97731D5C79C100FD25F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE97721D5C79C100FD25F0 /* ViewController.swift */; };
@@ -20,6 +21,9 @@
 /* Begin PBXFileReference section */
 		30B89B1E0036A2A4F7228609 /* Pods_DYTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B480CD40CDFA3F31B4ABBA1 /* Pods-DYTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYTabBarController.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYTabBarController/Pods-DYTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		63D3A7D21D5CCE98008B1C2F /* Arranged.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arranged.framework; path = "../../../../../Users/a1/Library/Developer/Xcode/DerivedData/DYTabBarController-gnjrtukkrcpovjclxtneatrdbcyj/Build/Products/Debug-iphonesimulator/Arranged/Arranged.framework"; sourceTree = "<group>"; };
+		63D3A7D41D5CDAC5008B1C2F /* OAStackView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAStackView.framework; path = "Pods/../build/Debug-iphoneos/OAStackView/OAStackView.framework"; sourceTree = "<group>"; };
+		63D3A7D61D5CE09A008B1C2F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../Users/a1/Library/Developer/Xcode/DerivedData/DYTabBarController-gnjrtukkrcpovjclxtneatrdbcyj/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		822CA076EBD8F3E0D51B0044 /* Pods-DYTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYTabBarController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYTabBarController/Pods-DYTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
 		84BE976D1D5C79C000FD25F0 /* DYTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE97701D5C79C100FD25F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D3A7D71D5CE09A008B1C2F /* SnapKit.framework in Frameworks */,
 				651BBC8615772B98FA83D1BB /* Pods_DYTabBarController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +52,9 @@
 		47D7DB1A7ADE0D87F56889DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63D3A7D61D5CE09A008B1C2F /* SnapKit.framework */,
+				63D3A7D41D5CDAC5008B1C2F /* OAStackView.framework */,
+				63D3A7D21D5CCE98008B1C2F /* Arranged.framework */,
 				30B89B1E0036A2A4F7228609 /* Pods_DYTabBarController.framework */,
 			);
 			name = Frameworks;
@@ -343,6 +351,10 @@
 			baseConfigurationReference = 822CA076EBD8F3E0D51B0044 /* Pods-DYTabBarController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OAStackView",
+				);
 				INFOPLIST_FILE = DYTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flashword.DYTabBarController;
@@ -355,6 +367,10 @@
 			baseConfigurationReference = 3B480CD40CDFA3F31B4ABBA1 /* Pods-DYTabBarController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OAStackView",
+				);
 				INFOPLIST_FILE = DYTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flashword.DYTabBarController;

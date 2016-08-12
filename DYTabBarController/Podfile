@@ -3,5 +3,5 @@ use_frameworks!
 platform :ios, "8.0"
 
 target 'DYTabBarController' do
-	pod "Arranged"
+	pod "SnapKit"
 end

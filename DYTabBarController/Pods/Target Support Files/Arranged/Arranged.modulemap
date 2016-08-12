@@ -1,6 +1,0 @@
-framework module Arranged {
-  umbrella header "Arranged-umbrella.h"
-
-  export *
-  module * { export * }
-}
