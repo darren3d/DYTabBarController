@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Pd-V6-qv1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Pd-V6-qv1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,13 +33,32 @@
                     <view key="view" contentMode="scaleToFill" id="0NI-5p-TZb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" image="1_normal" selectedImage="1_highlighted" id="3ll-8H-vEn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGu-dH-fpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="584"/>
+            <point key="canvasLocation" x="634" y="565"/>
+        </scene>
+        <!--Item 4-->
+        <scene sceneID="hbh-PO-75O">
+            <objects>
+                <viewController id="MJm-h0-gdM" customClass="Item2Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JXS-nB-VrK"/>
+                        <viewControllerLayoutGuide type="bottom" id="rVp-dd-Aes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QZP-D4-DWj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 4" image="3_normal" selectedImage="3_highlighted" id="qG7-Vy-xSN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nJ-sh-ihP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="1095"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="8bj-bw-PFj">
@@ -58,7 +77,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-gO-MQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="-180"/>
+            <point key="canvasLocation" x="603" y="-160"/>
+        </scene>
+        <!--Item 3-->
+        <scene sceneID="P85-Af-cwH">
+            <objects>
+                <viewController id="8Zo-84-mQk" customClass="Item1Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tZZ-a2-3h6"/>
+                        <viewControllerLayoutGuide type="bottom" id="OcV-ta-4EA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XRE-2d-bFG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 3" image="2_normal" selectedImage="2_highlighted" id="dFh-Uy-UVZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afh-xX-i1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="1095"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MgI-qJ-o2L">
@@ -73,6 +111,8 @@
                     <connections>
                         <segue destination="7nu-Ol-sxl" kind="relationship" relationship="viewControllers" id="6DY-tr-2RZ"/>
                         <segue destination="yJt-sb-JHI" kind="relationship" relationship="viewControllers" id="1gL-8o-Nbf"/>
+                        <segue destination="8Zo-84-mQk" kind="relationship" relationship="viewControllers" id="j9V-sf-jGz"/>
+                        <segue destination="MJm-h0-gdM" kind="relationship" relationship="viewControllers" id="C3c-CX-6uf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBF-8D-49p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,5 +125,9 @@
         <image name="0_normal" width="26" height="24"/>
         <image name="1_highlighted" width="24" height="24"/>
         <image name="1_normal" width="24" height="24"/>
+        <image name="2_highlighted" width="26" height="24"/>
+        <image name="2_normal" width="26" height="24"/>
+        <image name="3_highlighted" width="20" height="24"/>
+        <image name="3_normal" width="20" height="24"/>
     </resources>
 </document>

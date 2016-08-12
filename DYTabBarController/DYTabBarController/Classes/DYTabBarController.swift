@@ -46,7 +46,7 @@ class DYTabBarController: UITabBarController {
         
         colorTab.addTarget(self, action: #selector(onColorTabChanged(_:)), forControlEvents:.ValueChanged)
         
-        setViewControllers(self.viewControllers, animated: false)
+        setViewControllers(self.childViewControllers, animated: false)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -66,7 +66,7 @@ class DYTabBarController: UITabBarController {
     }
     
     @objc func onColorTabChanged(sender: DYColorTab) {
-        if selectedIndex != sender.selectedSegmentIndex  {
+        if self.selectedIndex != sender.selectedSegmentIndex  {
             self.selectedIndex = sender.selectedSegmentIndex
         }
     }
@@ -84,18 +84,18 @@ class DYTabBarController: UITabBarController {
             let size = self.scrollView.bounds.size
             let rectToVisible = CGRect(x: size.width*CGFloat(dySelectedIndex), y: 0, width: size.width, height: size.height)
             scrollView.delegate = nil
-            scrollView.scrollRectToVisible(rectToVisible, animated: true)
+            scrollView.scrollRectToVisible(rectToVisible, animated: false)
             scrollView.delegate = self
             
             if dySelectedIndex != colorTab.selectedSegmentIndex {
-                colorTab.selectedSegmentIndex = selectedIndex
+                colorTab.selectedSegmentIndex = dySelectedIndex
             }
         }
     }
     
     override var viewControllers: [UIViewController]? {
         get {
-            return self.childViewControllers
+            return nil
         }
         set {
             setViewControllers(newValue, animated: false)
@@ -178,5 +178,10 @@ extension DYTabBarController : DYColorTabDataSource {
 extension DYTabBarController : UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        dySelectedIndex = Int(round(scrollView.contentOffset.x/scrollView.bounds.width))
+        colorTab.selectedSegmentIndex = dySelectedIndex
     }
 }
