@@ -150,51 +150,41 @@ public class DYColorTab: UIControl {
             stackView.addSubview(label)
         }
         
-        remakeConstraints()
+        updateStackConstraints()
     }
     
-    func remakeConstraints() {
+    private func updateStackConstraints() {
         let count = min(buttons.count, labels.count)
         
-        var subviews = [UIView]()
+        var visibleSubviews = [UIView]()
         for index in 0..<count {
             let btn = buttons[index]
             if !btn.hidden {
-                subviews.append(btn)
-            } else  {
-                btn.snp_removeConstraints()
+                visibleSubviews.append(btn)
             }
             
             let lbe = labels[index]
             if !lbe.hidden {
-                subviews.append(lbe)
-            } else {
-                lbe.snp_removeConstraints()
+                visibleSubviews.append(lbe)
             }
         }
+        let visibleCount = visibleSubviews.count
+        if visibleCount <= 0 {
+            return
+        }
         
-        var preView : UIView? = nil
-        for subview in subviews {
-            subview.snp_remakeConstraints(closure: { (make) in
+        var x : CGFloat = 0
+        let subViewWidth = bounds.width / CGFloat(visibleCount)
+        
+        for subview in visibleSubviews {
+            subview.snp_updateConstraints(closure: { (make) in
                 make.centerY.equalTo(self)
-                
-                if preView != nil {
-                    make.width.equalTo(preView!)
-                    make.leading.equalTo(preView!.snp_trailing)
-                } else {
-                    make.leading.equalTo(self.snp_leading)
-                }
+                make.width.equalTo(subViewWidth)
+                make.leading.equalTo(self.snp_leading).offset(x)
             })
             
-            preView = subview
+            x += subViewWidth
         }
-        
-        if preView != nil {
-            preView!.snp_makeConstraints(closure: { (make) in
-                make.trailing.equalTo(self.snp_trailing)
-            })
-        }
-        
     }
     
 }
@@ -260,7 +250,7 @@ private extension DYColorTab {
             toLabel.alpha = 1
             toIcon.selected = true
             
-            self.remakeConstraints()
+            self.updateStackConstraints()
             
             self.stackView.layoutIfNeeded()
             self.layoutIfNeeded()
