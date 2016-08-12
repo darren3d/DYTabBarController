@@ -43,6 +43,11 @@ class DYTabBarController: UITabBarController {
         }
         
         self.tabBar.addSubview(colorTab)
+        colorTab.snp_makeConstraints { (make) in
+            make.center.equalTo(self.tabBar)
+            make.width.equalTo(self.tabBar)
+            make.height.equalTo(self.tabBar).offset(-12)
+        }
         
         colorTab.addTarget(self, action: #selector(onColorTabChanged(_:)), forControlEvents:.ValueChanged)
         
