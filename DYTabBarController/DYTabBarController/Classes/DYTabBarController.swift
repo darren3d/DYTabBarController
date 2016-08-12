@@ -9,6 +9,18 @@
 import UIKit
 
 class DYTabBarController: UITabBarController {
+    private var dyViewControllers : [UIViewController] = []
+    private var dySelectedIndex : Int = 0
+    
+    private(set) lazy var scrollView : UIScrollView = {
+        let scrollView = UIScrollView(frame: self.view.bounds)
+        scrollView.userInteractionEnabled = true
+        scrollView.pagingEnabled = true
+        scrollView.bounces  = false
+        scrollView.delegate = self
+        return scrollView
+    }()
+    
     private(set) lazy var colorTab : DYColorTab = {
         let colorTab = DYColorTab(frame: self.tabBar.bounds)
         colorTab.userInteractionEnabled = true
@@ -18,6 +30,17 @@ class DYTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.automaticallyAdjustsScrollViewInsets = false;
+        
+        let tabBar = DYTabBar(frame: self.tabBar.frame)
+        self.setValue(tabBar, forKey: "tabBar")
+        
+        self.view.insertSubview(scrollView, belowSubview: self.tabBar)
+        scrollView.snp_makeConstraints { (make) in
+            make.center.equalTo(self.view)
+            make.size.equalTo(self.view)
+        }
         
         self.tabBar.addSubview(colorTab)
         
@@ -49,8 +72,22 @@ class DYTabBarController: UITabBarController {
     }
     
     override var selectedIndex: Int {
-        didSet {
-            if selectedIndex != colorTab.selectedSegmentIndex {
+        get {
+            return dySelectedIndex
+        }
+        set {
+            if dySelectedIndex == newValue {
+                return
+            }
+            self.dySelectedIndex = newValue
+            
+            let size = self.scrollView.bounds.size
+            let rectToVisible = CGRect(x: size.width*CGFloat(dySelectedIndex), y: 0, width: size.width, height: size.height)
+            scrollView.delegate = nil
+            scrollView.scrollRectToVisible(rectToVisible, animated: true)
+            scrollView.delegate = self
+            
+            if dySelectedIndex != colorTab.selectedSegmentIndex {
                 colorTab.selectedSegmentIndex = selectedIndex
             }
         }
@@ -65,16 +102,40 @@ class DYTabBarController: UITabBarController {
         }
     }
     
+    override var selectedViewController: UIViewController? {
+        get {
+            return (dySelectedIndex >= 0 && dySelectedIndex < dyViewControllers.count) ? dyViewControllers[dySelectedIndex] : nil
+        }        
+        set {
+            guard let newValue = newValue, 
+                let index = dyViewControllers.indexOf(newValue) else {
+                    return
+            }
+            self.selectedIndex = index
+        }
+    }
+    
     override func setViewControllers(viewControllers: [UIViewController]?, animated: Bool) {
         guard let viewControllers = viewControllers else {
             return
         }
         
-        for childController in viewControllers {
+        dyViewControllers = viewControllers
+        
+        let size = self.scrollView.bounds.size
+        self.scrollView.delegate = nil
+        self.scrollView.contentOffset = CGPointMake(size.width*CGFloat(dySelectedIndex), 0);
+        self.scrollView.contentSize = CGSizeMake(size.width*CGFloat(viewControllers.count), size.height);
+        self.scrollView.delegate = self
+        
+        for (index, childController) in viewControllers.enumerate() {
             childController.removeFromParentViewController()
             childController.view.removeFromSuperview()
             
             self.addChildViewController(childController)
+            
+            childController.view.frame = CGRect(x: size.width*CGFloat(index), y: 0, width: size.width, height: size.height)
+            scrollView.addSubview(childController.view)
         }
         
         colorTab.reloadData()
@@ -84,7 +145,7 @@ class DYTabBarController: UITabBarController {
 
 extension DYTabBarController : DYColorTabDataSource {
     func numberOfItems(inTabSwitcher tabSwitcher: DYColorTab) -> Int {
-        return self.childViewControllers.count
+        return dyViewControllers.count
     }
     
     func tabSwitcher(tabSwitcher: DYColorTab, titleAt index: Int) -> String {
@@ -111,5 +172,11 @@ extension DYTabBarController : DYColorTabDataSource {
     func tabSwitcher(tabSwitcher: DYColorTab, tintColorAt index: Int) -> UIColor {
         let colors = [UIColor.brownColor(), UIColor.cyanColor(), UIColor.magentaColor(), UIColor.purpleColor(), UIColor.orangeColor()]
         return colors[index]
+    }
+}
+
+extension DYTabBarController : UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
     }
 }
