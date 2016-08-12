@@ -56,6 +56,15 @@ class DYTabBarController: UITabBarController {
         }
     }
     
+    override var viewControllers: [UIViewController]? {
+        get {
+            return self.childViewControllers
+        }
+        set {
+            setViewControllers(newValue, animated: false)
+        }
+    }
+    
     override func setViewControllers(viewControllers: [UIViewController]?, animated: Bool) {
         guard let viewControllers = viewControllers else {
             return
