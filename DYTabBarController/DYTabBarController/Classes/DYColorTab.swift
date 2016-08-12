@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 @objc public protocol DYColorTabDataSource: class {
     
@@ -34,7 +35,7 @@ public class DYColorTab: UIControl {
     /// Font for titles.
     public var titleFont: UIFont = .systemFontOfSize(14)
     
-    private let stackView = UIStackView()
+    private let stackView = UIView()
     private var buttons: [UIButton] = []
     private var labels: [UILabel] = []
     private(set) lazy var highlighterView: UIView = {
@@ -142,12 +143,58 @@ public class DYColorTab: UIControl {
         for index in 0..<count {
             let button = createButton(forIndex: index, withDataSource: dataSource)
             buttons.append(button)
-            stackView.addArrangedSubview(button)
+            stackView.addSubview(button)
             
             let label = createLabel(forIndex: index, withDataSource: dataSource)
             labels.append(label)
-            stackView.addArrangedSubview(label)
+            stackView.addSubview(label)
         }
+        
+        remakeConstraints()
+    }
+    
+    func remakeConstraints() {
+        let count = min(buttons.count, labels.count)
+        
+        var subviews = [UIView]()
+        for index in 0..<count {
+            let btn = buttons[index]
+            if !btn.hidden {
+                subviews.append(btn)
+            } else  {
+                btn.snp_removeConstraints()
+            }
+            
+            let lbe = labels[index]
+            if !lbe.hidden {
+                subviews.append(lbe)
+            } else {
+                lbe.snp_removeConstraints()
+            }
+        }
+        
+        var preView : UIView? = nil
+        for subview in subviews {
+            subview.snp_remakeConstraints(closure: { (make) in
+                make.centerY.equalTo(self)
+                
+                if preView != nil {
+                    make.width.equalTo(preView!)
+                    make.leading.equalTo(preView!.snp_trailing)
+                } else {
+                    make.leading.equalTo(self.snp_leading)
+                }
+            })
+            
+            preView = subview
+        }
+        
+        if preView != nil {
+            preView!.snp_makeConstraints(closure: { (make) in
+                make.trailing.equalTo(self.snp_trailing)
+            })
+        }
+        
     }
     
 }
@@ -157,7 +204,10 @@ private extension DYColorTab {
     
     private func commonInit() {
         addSubview(stackView)
-        stackView.distribution = .FillEqually
+        stackView.snp_makeConstraints { (make) in
+            make.size.equalTo(self)
+            make.center.equalTo(self)
+        }
     }
     
     func createButton(forIndex index: Int, withDataSource dataSource: DYColorTabDataSource) -> UIButton {
@@ -210,6 +260,8 @@ private extension DYColorTab {
             toLabel.alpha = 1
             toIcon.selected = true
             
+            self.remakeConstraints()
+            
             self.stackView.layoutIfNeeded()
             self.layoutIfNeeded()
             self.moveHighlighterView(toItemAt: toIndex)
@@ -221,9 +273,9 @@ private extension DYColorTab {
             usingSpringWithDamping: 0.7,
             initialSpringVelocity: 3,
             options: [],
-            animations: animation,
-            completion: nil
-        )
+            animations: animation
+        ) { _ in
+        }
     }
     
     func moveHighlighterView(toItemAt toIndex: Int) {
