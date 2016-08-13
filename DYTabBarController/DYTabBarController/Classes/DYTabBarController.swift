@@ -61,11 +61,27 @@ class DYTabBarController: UITabBarController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         emptyTabBarSubViews()
+        
+        selectedViewController?.viewWillAppear(false)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        selectedViewController?.viewDidAppear(false)
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        selectedViewController?.viewWillDisappear(false)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        selectedViewController?.viewDidDisappear(false)
     }
     
     private func emptyTabBarSubViews() {
@@ -89,15 +105,26 @@ class DYTabBarController: UITabBarController {
             return dySelectedIndex
         }
         set {
-            if dySelectedIndex == newValue {
+            if dySelectedIndex == newValue ||
+                scrollView.decelerating ||
+                scrollView.dragging {
                 return
             }
+            let oldSelectedController = dyViewControllers[safe: dySelectedIndex]
+            let newSelectedController = dyViewControllers[safe: newValue]
             self.dySelectedIndex = newValue
             
             let size = self.scrollView.bounds.size
             let rectToVisible = CGRect(x: size.width*CGFloat(dySelectedIndex), y: 0, width: size.width, height: size.height)
             scrollView.delegate = nil
+            
+            oldSelectedController?.viewWillDisappear(false)
+            newSelectedController?.viewWillAppear(false)
             scrollView.scrollRectToVisible(rectToVisible, animated: false)
+            newSelectedController?.viewDidAppear(false)
+            oldSelectedController?.viewDidDisappear(false)
+            
+            
             scrollView.delegate = self
             
             if dySelectedIndex != colorTab.selectedSegmentIndex {
@@ -148,6 +175,7 @@ class DYTabBarController: UITabBarController {
         
         for (index, childController) in viewControllers.enumerate() {
             childController.removeFromParentViewController()
+            
             childController.view.removeFromSuperview()
             
             self.addChildViewController(childController)
@@ -201,7 +229,7 @@ extension DYTabBarController : UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        dySelectedIndex = Int(round(scrollView.contentOffset.x/scrollView.bounds.width))
-        colorTab.selectedSegmentIndex = dySelectedIndex
+        let index = Int(round(scrollView.contentOffset.x/scrollView.bounds.width))
+        colorTab.selectedSegmentIndex = index
     }
 }
