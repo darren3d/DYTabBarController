@@ -22,102 +22,194 @@
             </objects>
             <point key="canvasLocation" x="-241" y="288"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="xJj-wx-4ra">
-            <objects>
-                <viewController id="yJt-sb-JHI" customClass="Item2Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J7F-h6-ngF"/>
-                        <viewControllerLayoutGuide type="bottom" id="ONj-Et-G34"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0NI-5p-TZb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="1_normal" selectedImage="1_highlighted" id="3ll-8H-vEn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DGu-dH-fpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="634" y="565"/>
-        </scene>
-        <!--Item 4-->
-        <scene sceneID="hbh-PO-75O">
-            <objects>
-                <viewController id="MJm-h0-gdM" customClass="Item2Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JXS-nB-VrK"/>
-                        <viewControllerLayoutGuide type="bottom" id="rVp-dd-Aes"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QZP-D4-DWj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 4" image="3_normal" selectedImage="3_highlighted" id="qG7-Vy-xSN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7nJ-sh-ihP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="416" y="1095"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="8bj-bw-PFj">
-            <objects>
-                <viewController id="7nu-Ol-sxl" customClass="Item1Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aFP-DS-fot"/>
-                        <viewControllerLayoutGuide type="bottom" id="ybY-Z9-NXA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IzU-KX-Y85">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.10980392160000001" green="0.81176470590000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="0_normal" selectedImage="0_highlighted" id="7pi-iy-NYZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-gO-MQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="603" y="-160"/>
-        </scene>
-        <!--Item 3-->
-        <scene sceneID="P85-Af-cwH">
-            <objects>
-                <viewController id="8Zo-84-mQk" customClass="Item1Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tZZ-a2-3h6"/>
-                        <viewControllerLayoutGuide type="bottom" id="OcV-ta-4EA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XRE-2d-bFG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" image="2_normal" selectedImage="2_highlighted" id="dFh-Uy-UVZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="afh-xX-i1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="30" y="1095"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--tab-->
         <scene sceneID="MgI-qJ-o2L">
             <objects>
                 <tabBarController id="ibx-Yz-8qR" customClass="TabBarController" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="V5o-8c-Oa3"/>
+                    <navigationItem key="navigationItem" title="tab" id="V5o-8c-Oa3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="X7y-jN-8TB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7nu-Ol-sxl" kind="relationship" relationship="viewControllers" id="6DY-tr-2RZ"/>
-                        <segue destination="yJt-sb-JHI" kind="relationship" relationship="viewControllers" id="1gL-8o-Nbf"/>
-                        <segue destination="8Zo-84-mQk" kind="relationship" relationship="viewControllers" id="j9V-sf-jGz"/>
-                        <segue destination="MJm-h0-gdM" kind="relationship" relationship="viewControllers" id="C3c-CX-6uf"/>
+                        <segue destination="Yax-Kk-tpU" kind="relationship" relationship="viewControllers" id="xh7-A1-vki"/>
+                        <segue destination="yEu-05-eid" kind="relationship" relationship="viewControllers" id="Pd5-6i-Qzu"/>
+                        <segue destination="7ea-VC-XsS" kind="relationship" relationship="viewControllers" id="Rha-rD-Lgz"/>
+                        <segue destination="BBL-69-Ga8" kind="relationship" relationship="viewControllers" id="FAb-jj-4NY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBF-8D-49p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189" y="288"/>
+        </scene>
+        <!--Item1-->
+        <scene sceneID="nTA-9b-6o6">
+            <objects>
+                <navigationController id="Yax-Kk-tpU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item1" image="0_normal" selectedImage="0_highlighted" id="3DS-j9-CFU" customClass="DYTabBarItem" customModule="DYTabBarController" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorBackground">
+                                <color key="value" red="0.95686274509803926" green="0.52941176470588236" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Yf-NJ-Nv1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gdV-jF-dTu" kind="relationship" relationship="rootViewController" id="myj-Ec-e8w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRp-7Z-tA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="1038"/>
+        </scene>
+        <!--item1-->
+        <scene sceneID="YeZ-Tj-gaO">
+            <objects>
+                <viewController storyboardIdentifier="Item1Controller" id="gdV-jF-dTu" customClass="Item1Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KXt-Cw-rq4"/>
+                        <viewControllerLayoutGuide type="bottom" id="OGS-Ig-KH7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="32Z-4p-mQT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item1" id="CO9-8o-MLx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAB-MX-TkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="1736"/>
+        </scene>
+        <!--Item2-->
+        <scene sceneID="lpb-2f-0yd">
+            <objects>
+                <navigationController id="yEu-05-eid" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item2" image="1_normal" selectedImage="1_highlighted" id="TAA-Lm-N8P" customClass="DYTabBarItem" customModule="DYTabBarController" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorBackground">
+                                <color key="value" red="0.41176470588235292" green="0.70196078431372544" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="esY-0W-B8S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fwl-rv-4Jh" kind="relationship" relationship="rootViewController" id="cuv-YQ-YOM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upc-ze-Qxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="1038"/>
+        </scene>
+        <!--item2-->
+        <scene sceneID="H7L-Ph-xav">
+            <objects>
+                <viewController storyboardIdentifier="Item2Controller" id="Fwl-rv-4Jh" customClass="Item2Controller" customModule="DYTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5gg-T6-GB1"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ee-Bi-aaS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="08l-MD-qw0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item2" id="Rlu-pU-yWf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1d-G7-FyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="1752"/>
+        </scene>
+        <!--Item3-->
+        <scene sceneID="b89-ZQ-sal">
+            <objects>
+                <navigationController id="7ea-VC-XsS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item3" image="2_normal" selectedImage="2_highlighted" id="eAs-Re-6qR" customClass="DYTabBarItem" customModule="DYTabBarController" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorBackground">
+                                <color key="value" red="0.89411764705882357" green="0.43137254901960786" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8OU-Cu-NvP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0FB-Bw-Z7L" kind="relationship" relationship="rootViewController" id="0fK-Bq-PSV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMt-av-77z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="1038"/>
+        </scene>
+        <!--item3-->
+        <scene sceneID="byf-zI-Gu8">
+            <objects>
+                <viewController id="0FB-Bw-Z7L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B28-XT-anI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ovU-xL-6zm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S4E-IZ-USI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item3" id="5NA-u5-gHR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJI-3C-AdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="1752"/>
+        </scene>
+        <!--Item4-->
+        <scene sceneID="zyF-1o-MJW">
+            <objects>
+                <navigationController id="BBL-69-Ga8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item4" image="3_normal" selectedImage="3_highlighted" id="p4N-Xp-1iI" customClass="DYTabBarItem" customModule="DYTabBarController" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorBackground">
+                                <color key="value" red="0.20000000000000001" green="0.64313725490196083" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQG-B7-Epy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JFV-Oz-iqf" kind="relationship" relationship="rootViewController" id="LHE-tQ-Xar"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nx3-sj-9zO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="1038"/>
+        </scene>
+        <!--item4-->
+        <scene sceneID="019-Wf-DZo">
+            <objects>
+                <viewController id="JFV-Oz-iqf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fn9-MX-m2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="gY9-qe-Rgh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMx-SI-g84">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="item4" id="zEG-m8-7NG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0h-ac-USo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="1752"/>
         </scene>
     </scenes>
     <resources>

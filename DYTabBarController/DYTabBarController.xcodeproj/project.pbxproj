@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		639F25011D5F2C1400301085 /* DYTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F25001D5F2C1400301085 /* DYTabBarItem.swift */; };
 		63D3A7D71D5CE09A008B1C2F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D3A7D61D5CE09A008B1C2F /* SnapKit.framework */; };
 		651BBC8615772B98FA83D1BB /* Pods_DYTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B89B1E0036A2A4F7228609 /* Pods_DYTabBarController.framework */; };
 		84BE97711D5C79C100FD25F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE97701D5C79C100FD25F0 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		30B89B1E0036A2A4F7228609 /* Pods_DYTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B480CD40CDFA3F31B4ABBA1 /* Pods-DYTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYTabBarController.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYTabBarController/Pods-DYTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		639F25001D5F2C1400301085 /* DYTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYTabBarItem.swift; sourceTree = "<group>"; };
 		63D3A7D21D5CCE98008B1C2F /* Arranged.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arranged.framework; path = "../../../../../Users/a1/Library/Developer/Xcode/DerivedData/DYTabBarController-gnjrtukkrcpovjclxtneatrdbcyj/Build/Products/Debug-iphonesimulator/Arranged/Arranged.framework"; sourceTree = "<group>"; };
 		63D3A7D41D5CDAC5008B1C2F /* OAStackView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAStackView.framework; path = "Pods/../build/Debug-iphoneos/OAStackView/OAStackView.framework"; sourceTree = "<group>"; };
 		63D3A7D61D5CE09A008B1C2F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../Users/a1/Library/Developer/Xcode/DerivedData/DYTabBarController-gnjrtukkrcpovjclxtneatrdbcyj/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				84BE97851D5C7B8E00FD25F0 /* CollectionType+Safe.swift */,
 				84E1E7B61D5D73EB00E2E9E3 /* DYTabBarController.swift */,
 				84E1E7BC1D5DE6B100E2E9E3 /* DYTabBar.swift */,
+				639F25001D5F2C1400301085 /* DYTabBarItem.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E1E7BB1D5DCADE00E2E9E3 /* Item2Controller.swift in Sources */,
+				639F25011D5F2C1400301085 /* DYTabBarItem.swift in Sources */,
 				84BE97861D5C7B8E00FD25F0 /* CollectionType+Safe.swift in Sources */,
 				84E1E7BD1D5DE6B100E2E9E3 /* DYTabBar.swift in Sources */,
 				84BE97731D5C79C100FD25F0 /* TabBarController.swift in Sources */,

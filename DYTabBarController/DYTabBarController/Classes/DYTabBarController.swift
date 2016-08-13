@@ -14,6 +14,8 @@ class DYTabBarController: UITabBarController {
     
     private(set) lazy var scrollView : UIScrollView = {
         let scrollView = UIScrollView(frame: self.view.bounds)
+        scrollView.scrollsToTop = false
+        scrollView.backgroundColor = UIColor.whiteColor()
         scrollView.userInteractionEnabled = true
         scrollView.pagingEnabled = true
         scrollView.bounces  = false
@@ -56,8 +58,14 @@ class DYTabBarController: UITabBarController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         emptyTabBarSubViews()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func emptyTabBarSubViews() {
@@ -98,8 +106,13 @@ class DYTabBarController: UITabBarController {
         }
     }
     
+    func tabViewControllers() -> [UIViewController] {
+        return Array<UIViewController>(dyViewControllers)
+    }
+    
     override var viewControllers: [UIViewController]? {
         get {
+            //always return nil, or something may be wrong
             return nil
         }
         set {
@@ -154,29 +167,31 @@ extension DYTabBarController : DYColorTabDataSource {
     }
     
     func tabSwitcher(tabSwitcher: DYColorTab, titleAt index: Int) -> String {
-        guard let title = self.childViewControllers[index].tabBarItem.title else {
+        guard let title = dyViewControllers[index].tabBarItem.title else {
             return ""
         }
         return title
     }
     
     func tabSwitcher(tabSwitcher: DYColorTab, iconAt index: Int) -> UIImage {
-        guard let image = self.childViewControllers[index].tabBarItem.image else {
+        guard let image = dyViewControllers[index].tabBarItem.image else {
             return UIImage()
         }
         return image
     }
     
     func tabSwitcher(tabSwitcher: DYColorTab, hightlightedIconAt index: Int) -> UIImage {
-        guard let image = self.childViewControllers[index].tabBarItem.selectedImage else {
+        guard let image = dyViewControllers[index].tabBarItem.selectedImage else {
             return UIImage()
         }
         return image
     }
     
     func tabSwitcher(tabSwitcher: DYColorTab, tintColorAt index: Int) -> UIColor {
-        let colors = [UIColor.brownColor(), UIColor.cyanColor(), UIColor.magentaColor(), UIColor.purpleColor(), UIColor.orangeColor()]
-        return colors[index]
+        guard let tabItem = dyViewControllers[index].tabBarItem as? DYTabBarItem else {
+            return UIColor()
+        }
+        return tabItem.colorBackground
     }
 }
 
